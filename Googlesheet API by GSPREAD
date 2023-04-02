@@ -1,0 +1,16 @@
+import gspread
+
+credentials = {
+'json format!'
+}
+
+
+gc = gspread.service_account_from_dict(credentials)
+
+
+sht1 = gc.open_by_key('16bC-qSnNQxEF9VM4UgT-TPw3KgZw1gVmsJxB0reeWMo')
+
+sheet = sht1.worksheet('Sheet1')
+sheet.get_all_values()
+sheet.update([[']Bingo!']])
+sheet.clear()
